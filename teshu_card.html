@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>For Teshu - A Dark Romance</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* --- Global & Card Styling for Dark Romance Theme --- */
+body{
+    animation:fadeIn 2s ease-in-out; 
+    background:#0a0305; /* Deep, dark charcoal */
+    color:#e0dcdc; /* Pale, aged text color */
+    font-family:'Cormorant Garamond', serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    margin:0;
+    overflow:hidden;
+    background-image: radial-gradient(circle at center, #1b0a0e 0%, #0a0305 100%);
+}
+.card{
+    max-width:640px;
+    padding:30px;
+    border-radius:18px;
+    background:rgba(20, 5, 8, 0.75); /* Semi-transparent dark overlay */
+    backdrop-filter: blur(4px);
+    box-shadow:0 0 40px rgba(255,105,180,.1), 0 0 15px #3a151b; /* Soft glow and deep shadow */
+    text-align:center;
+    position:relative;
+    z-index:2;
+    transition:all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(139, 0, 0, 0.1);
+}
+h1{
+    font-family:'Dancing Script', cursive;
+    color:#ff69b4; /* Deep, intense pink/crimson */
+    margin:0 0 15px;
+    font-size:3rem;
+    text-shadow:0 0 15px #ff69b455;
+    letter-spacing: 1px;
+}
+p{
+    font-family:'Cormorant Garamond', serif;
+    color:#c9c9c9;
+    font-size:1.15rem;
+    letter-spacing:0.8px;
+    line-height:1.7em;
+    font-weight: 400;
+}
+button{
+    font-family:'Cormorant Garamond', serif;
+    margin-top:20px;
+    padding:12px 25px;
+    border-radius:30px;
+    background:#4a121d;
+    border:2px solid #ff69b4;
+    color:#fff;
+    cursor:pointer;
+    transition:all 0.4s ease;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255,105,180,.3);
+}
+button:hover{
+    background:#6a1a2b;
+    box-shadow:0 0 30px #ff69b477;
+    transform:scale(1.05);
+}
+.note{
+    font-family:'Cormorant Garamond', serif;
+    background:rgba(255,105,180,0.05);
+    padding:18px;
+    border-radius:12px;
+    margin-top:15px;
+    color:#ffe0e5;
+    border-left: 5px solid #ff69b4;
+    font-style: italic;
+    transition:all 0.4s;
+    transform:scale(1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.note:hover{
+    transform:scale(1.02) rotate(0deg);
+    border-left: 5px solid #ffaaee;
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+
+/* --- Enhanced Heart & Sparkle Animations for Intensity --- */
+.heart{
+    position:fixed;
+    color:#ff4488; /* Intense crimson heart */
+    font-size:30px;
+    animation:floatUp 10s linear infinite;
+    pointer-events:none;
+    text-shadow:0 0 15px #ff4488, 0 0 5px #000;
+    opacity: 0.8;
+}
+@keyframes floatUp{
+    0%{bottom:-50px;opacity:0.2;transform:scale(0.3) rotate(0deg);}
+    50%{opacity:1;transform:scale(1.5) rotate(180deg);}
+    100%{bottom:110vh;opacity:0;transform:scale(0.8) rotate(360deg);}
+}
+.sparkle{
+    position:fixed;
+    color:#ffaaee; /* Pale gold/pink sparkle */
+    opacity:0.9;
+    font-size:20px;
+    animation:fall 8s linear infinite;
+    pointer-events:none;
+    text-shadow:0 0 12px #ffaaee, 0 0 5px #000;
+}
+@keyframes fall{
+    0%{transform:translateY(0) rotate(0deg); opacity:0.1;}
+    20%{opacity:1;}
+    100%{transform:translateY(110vh) rotate(540deg); opacity:0;}
+}
+</style>
+</head>
+<body>
+<div class='card' id='c'>
+<div id='s1'><h1>Hello, my love ❤️</h1><p>Teshu, from the moment I first saw you, every heartbeat has been a story of us. Your smile lights my darkest days, your voice is my favorite song, and your love is the chapter I never want to end. You make my world brighter, my heart fuller, and my soul complete. Every second apart feels endless, every moment with you feels like eternity. You are my forever, my dream, my everything. 🌟💖</p><button onclick="startMusic(); clickSound(); n(2);">Click there 💖</button></div>
+<div id='s2' style='display:none'><h1>Guess what? 😘</h1><p>Being with you makes every day feel like a novel I never want to close. Your laughter is the melody of my life, your touch the warmth that keeps me alive. Teshu, every chapter of us is more beautiful than I could have imagined.</p><button onclick="clickSound();
